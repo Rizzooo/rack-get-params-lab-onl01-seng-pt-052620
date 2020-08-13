@@ -17,12 +17,12 @@ class Application
       resp.write handle_search(search_term)
       
     elsif req.path.match(/cart/)
-      @@cart.each do |cart_items|
-        if @@cart.empty? 
-          "Your cart is empty"
-        else 
+      if @@cart.empty? 
+        "Your cart is empty"
+      else 
+        @@cart.each do |cart_items|
           resp.write "#{cart_items}\n"
-       end
+        end
       end
       
     elsif req.path.match(/add/)
