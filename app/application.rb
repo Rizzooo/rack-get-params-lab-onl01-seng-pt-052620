@@ -21,6 +21,8 @@ class Application
         resp.write "#{cart_items}\n"
       end
       
+      if @@cart.empty? 
+      
     elsif req.path.match(/add/)
       add_term = req.params["add"]
       resp.write add_or_error(add_term)
