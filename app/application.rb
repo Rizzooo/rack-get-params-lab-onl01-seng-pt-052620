@@ -46,7 +46,7 @@ class Application
   
   def add_or_error(add_term)
     if @@items.include?(add_term)
-      return "added #{add_term} "
+      return "added #{add_term}"
     else
       return "We don't have that item"
     end
