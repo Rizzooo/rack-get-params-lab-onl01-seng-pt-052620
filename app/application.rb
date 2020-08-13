@@ -32,7 +32,7 @@ class Application
         "added #{item}"
       else 
         return "We don't have that item"
-      resp.write add_or_error(add_term)
+      end
       
     else
       resp.write "Path Not Found"
